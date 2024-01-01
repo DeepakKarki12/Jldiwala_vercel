@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location Access</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='location.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='location.js') }}"></script> -->
+</head>
+<body>
+    <h1>Location Access Example</h1>
+    <h1>Select Your Choice</h1>
+  
+  <form>
+    <label for="choices">Choose an option:</label>
+    <select id="choices" name="choices">
+      <option value="Bakeray shop">Bakeray shop</option>
+      <option value="Medical store">Medical store</option>
+      <option value="Balber shop">Balber shop</option>
+      
+    </select>
+    
+    <br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="location"></p>
+    
+    
+
+</body>
+</html>
+
