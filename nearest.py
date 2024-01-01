@@ -25,7 +25,7 @@ class nearest_5:
         current_directory = os.getcwd()
 
 
-        driver_path = os.path.join(current_directory, 'chromedriver_win32', 'chromedriver.exe')
+        driver_path = os.path.join(current_directory, 'chromedriver_win32', 'chromedriver')
         # driver_path = "chromedriver.exe"
         # driver_path = os.environ.get("DRIVER_PATH")
         service = Service(driver_path)
