@@ -3,6 +3,7 @@ import pandas as pd
 import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 import os
 
 class nearest_5:
@@ -22,16 +23,16 @@ class nearest_5:
         options.add_argument('--disable-gpu')
         options.add_argument('--window-size=1920,1200')
         options.add_argument('--disable-dev-shm-usage')
-        current_directory = os.getcwd()
+        # current_directory = os.getcwd()
 
 
-        driver_path = os.path.join(current_directory, 'chromedriver_win32', 'chromedriver')
+        # driver_path = os.path.join(current_directory, 'chromedriver_win32', 'chromedriver')
         # driver_path = "chromedriver.exe"
         # driver_path = os.environ.get("DRIVER_PATH")
-        service = Service(driver_path)
-        driver = webdriver.Chrome(service=service)
+        # service = Service(driver_path)
+        # driver = webdriver.Chrome(service=service)
         # driver = webdriver.Chrome(options=options)
-        # driver = webdriver.Chrome()
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options = options)
         return driver
 
     
