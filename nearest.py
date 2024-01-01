@@ -32,7 +32,10 @@ class nearest_5:
         # service = Service(driver_path)
         # driver = webdriver.Chrome(service=service)
         # driver = webdriver.Chrome(options=options)
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options = options)
+        # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options = options)
+        driver_path = ChromeDriverManager(chromedriver_filename="chromedriver", install_dir="/tmp").install()
+        driver = webdriver.Chrome(service=Service(driver_path), options=options)
+
         return driver
 
     
