@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, jsonify, Blueprint
 
 
 
-# app = Flask(__name__)
+app = Flask(__name__)
 # app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://jldi_wala_db_user:XGqqD7dHgoxsa1lGUuNFcXm8U2O1jyG2@dpg-cm80q7mn7f5s73ec0u3g-a.oregon-postgres.render.com/jldi_wala_db'
 # main = Blueprint("__main__",__name__)
 # db.init_app(app)
