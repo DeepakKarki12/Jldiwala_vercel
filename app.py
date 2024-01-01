@@ -22,8 +22,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # return render_template('index.html')
-   return "Hello!! deepak from versel"
+    return render_template('index.html')
+   # return "Hello!! deepak from versel"
 
 # @app.route('/re', methods=['POST'])
 # def receive_location():
