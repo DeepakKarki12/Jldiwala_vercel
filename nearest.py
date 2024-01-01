@@ -21,7 +21,8 @@ class nearest_5:
         options.add_argument('--disable-gpu')
         options.add_argument('--window-size=1920,1200')
         options.add_argument('--disable-dev-shm-usage')
-        driver_path = "chromedriver_win32\chromedriver.exe"
+        # driver_path = "chromedriver_win32\chromedriver.exe"
+        driver_path = "DRIVER_PATH"
         service = Service(driver_path)
         driver = webdriver.Chrome(service=service)
         # driver = webdriver.Chrome(options=options)
